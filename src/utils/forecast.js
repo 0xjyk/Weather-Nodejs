@@ -10,7 +10,7 @@ function forecast (latitude,longitude, callback) {
             callback('Unable to find location. Try another search.', undefined);
         } else {
             const current = body.current;
-            callback(undefined, "The Current temperature is " + current.temperature + ". The current forecast is " + current.weather_descriptions[0] + ". It feels like " + current.feelslike + ".");
+            callback(undefined, "The Current temperature is " + current.temperature + ". The current forecast is " + current.weather_descriptions[0] + ". It feels like " + current.feelslike + "." + " The humdidity is "+ current.humidity + "%.");
 
         }
     });
